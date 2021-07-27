@@ -1,9 +1,8 @@
-package com.alanpatrik.todo.entities.enums;
+package com.alanpatrik.todo.enums;
 
 public enum TaskEnums {
-
+	
 	CREATED,
 	PENDING,
 	FINISHED,
-	
 }
