@@ -1,9 +1,6 @@
-package com.alanpatrik.todo.entities;
+package com.alanpatrik.todo.dto;
 
 import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 import com.alanpatrik.todo.enums.TaskEnums;
 
@@ -12,15 +9,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Users")
-public class Task {
+public class TaskDTO {
 
 	private String name;
 	private String descrition;
 	private Date date;
 	private TaskEnums status;
-
 }
