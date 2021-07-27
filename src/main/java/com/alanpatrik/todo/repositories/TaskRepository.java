@@ -1,5 +1,5 @@
 package com.alanpatrik.todo.repositories;
 
-public interface UserRepository {
+public interface TaskRepository {
 
 }
