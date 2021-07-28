@@ -1,6 +1,5 @@
 package com.alanpatrik.todo.entities;
 
-import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 
