@@ -1,24 +1,25 @@
 package com.alanpatrik.todo.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.alanpatrik.todo.dto.TaskDTO;
 import com.alanpatrik.todo.entities.Task;
+import com.alanpatrik.todo.exception.CustomBadRequestException;
+import com.alanpatrik.todo.exception.CustomNotFoundException;
 
 public interface ITaskService {
 
 	List<TaskDTO> findAll();
 	
-	TaskDTO findById(Long id);
+	TaskDTO findById(Long id) throws CustomNotFoundException;
 	
-	void verifyIfIsAlreadyRegistered(String name);
+	void verifyIfIsAlreadyRegistered(String name) throws CustomBadRequestException;
 	
-	Task verifyIfIsExist(Long id);
+	Task verifyIfIsExist(Long id) throws CustomNotFoundException;
 	
-	TaskDTO createTask(TaskDTO data);
+	TaskDTO createTask(TaskDTO data) throws CustomBadRequestException;
     
-	Optional<TaskDTO> updateTask(Long id, TaskDTO taskDTO);
+	TaskDTO updateTask(Long id, TaskDTO taskDTO) throws CustomNotFoundException;
     
-    void deleteTask(Long id);
+	TaskDTO deleteTask(Long id) throws CustomNotFoundException;
 }
