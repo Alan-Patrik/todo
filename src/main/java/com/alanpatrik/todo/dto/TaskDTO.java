@@ -18,7 +18,7 @@ public class TaskDTO implements Serializable {
 
 	private Long id;
 	private String name;
-	private String descrition;
+	private String description;
 	private Date startDate;
 	private Date endDate;
 	private Instant createdAt;

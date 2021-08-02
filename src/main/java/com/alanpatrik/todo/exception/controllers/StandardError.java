@@ -1,4 +1,4 @@
-package com.alanpatrik.todo.exception.controller;
+package com.alanpatrik.todo.exception.controllers;
 
 import java.io.Serializable;
 import java.time.Instant;

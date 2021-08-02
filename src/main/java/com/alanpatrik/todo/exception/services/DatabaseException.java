@@ -1,4 +1,4 @@
-package com.alanpatrik.todo.exception.service;
+package com.alanpatrik.todo.exception.services;
 
 public class DatabaseException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

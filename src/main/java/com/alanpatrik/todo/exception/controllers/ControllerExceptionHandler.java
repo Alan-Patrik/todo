@@ -1,4 +1,4 @@
-package com.alanpatrik.todo.exception.controller;
+package com.alanpatrik.todo.exception.controllers;
 
 import java.time.Instant;
 
@@ -9,14 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.alanpatrik.todo.exception.service.ControllerNotFoundException;
-import com.alanpatrik.todo.exception.service.DatabaseException;
+import com.alanpatrik.todo.exception.services.CustomNotFoundException;
+import com.alanpatrik.todo.exception.services.DatabaseException;
 
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-	@ExceptionHandler(ControllerNotFoundException.class)
-	public ResponseEntity<StandardError> resourceNotFound(ControllerNotFoundException e, HttpServletRequest request) {
+	@ExceptionHandler(CustomNotFoundException.class)
+	public ResponseEntity<StandardError> resourceNotFound(CustomNotFoundException e, HttpServletRequest request) {
 		String error = "Resource not found";
 		HttpStatus status = HttpStatus.NOT_FOUND;
 		StandardError err = new StandardError(Instant.now(), status.value(), error, e.getMessage(),
