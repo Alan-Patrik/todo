@@ -1,0 +1,19 @@
+:root {
+  --main-red: #fc4a1a;
+  --main-yellow: #f7b733;
+  --main-background: #4abdac;
+  --content-background: #dfdce3;
+
+  /* dark-mode */
+  --main-background-dark: #0e0b16;
+  --main-blue: #4a76b8;
+
+  /* Fonts */
+  --body-font: "Source Sans Pro", sans-serif;
+  --heading-font: "Barlow Condensed", sans-serif;
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: var(--body-font);
+}
