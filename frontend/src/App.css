@@ -1,12 +1,20 @@
 :root {
   --main-red: #fc4a1a;
+  --main-gray: #a1a5a7;
+  --main-icon: #ffffff;
+  --dark-gray: #505558;
+  --light-gray: #aeb2b4;
+  --hover-icon: #042a2b;
   --main-yellow: #f7b733;
-  --main-background: #4abdac;
-  --content-background: #dfdce3;
+  --main-header: #ececec;
+  --main-button: #4f7cac;
+  --medium-gray: #899398;
+  --main-hover-button: #3547e9;
+  /* --content-background: #dfdce3; */
+  --sidebar-main-background: #4abdac;
+  --sidebar-hover-background: #29746b;
 
-  /* dark-mode */
-  --main-background-dark: #0e0b16;
-  --main-blue: #4a76b8;
+  --main-background: #f9f9f9;
 
   /* Fonts */
   --body-font: "Source Sans Pro", sans-serif;
@@ -16,4 +24,10 @@
 body {
   background-color: var(--main-background);
   font-family: var(--body-font);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -1,10 +1,13 @@
-import { Container, Content, Title } from "./styles";
+import { Container, Content, Image, Title } from "./styles";
+
+import IconTask from "../../assets/task.png";
 
 const Header = () => {
   return (
     <Container id="container">
       <Content id="content">
-        <Title id="header-title">Tasks</Title>
+        <Image id="task-icon" src={IconTask} />
+        <Title id="header-title">Tasks - Todo</Title>
       </Content>
     </Container>
   );
