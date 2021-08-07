@@ -1,17 +1,15 @@
-import { Container, TitleContainer, ComponentContainer } from "./styles";
+import { Container, TitleContainer } from "./styles";
 
 type Props = {
   title: string;
-  component?: React.ReactNode;
 };
 
-const ContentHeader = ({ title, component }: Props) => {
+const ContentHeader = ({ title }: Props) => {
   return (
     <Container>
       <TitleContainer>
         <h1>{title}</h1>
       </TitleContainer>
-      <ComponentContainer>{component}</ComponentContainer>
     </Container>
   );
 };

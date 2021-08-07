@@ -12,13 +12,14 @@ export const TitleContainer = styled.div`
   > h1 {
     color: var(--dark-gray);
     font-family: var(--heading-font);
-    font-size: 28px;
-    margin: 34px 0 24px 0;
+    font-size: 1.75rem;
+    margin: 1.5rem 0 1.5rem 0;
+    right: 0;
   }
 `;
 
-export const ComponentContainer = styled.div`
-  grid-area: COMPONENT;
-  display: flex;
-  justify-content: flex-end;
-`;
+// export const ComponentContainer = styled.div`
+//   grid-area: COMPONENT;
+//   display: flex;
+//   justify-content: flex-end;
+// `;
