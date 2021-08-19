@@ -2,19 +2,25 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   grid-area: CONTENT;
-  background-color: var(--main-background);
-  padding: 0 5.875rem;
-  height: calc(100vh - 5.313rem);
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 100%;
+
+  @media (min-width: 250px) and (max-width: 600px) {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+  }
 `;
 
-export const FooterContainer = styled.div`
-  margin: 1.875rem 0;
-`;
+export const ContentContainer = styled.div`
+  padding-left: 5.625rem;
 
-export const FooterContent = styled.footer`
-  display: flex;
-  color: var(--medium-gray);
-  font-family: var(--body-font);
-  justify-content: center;
+  @media (min-width: 250px) and (max-width: 600px) {
+    padding-left: 2rem;
+  }
+
+  @media (min-width: 600px) and (max-width: 900px) {
+    margin: 0;
+    padding-left: 4rem;
+  }
 `;

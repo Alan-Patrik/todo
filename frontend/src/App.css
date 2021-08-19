@@ -1,4 +1,5 @@
 :root {
+  --main-black: #000000;
   --main-red: #fc4a1a;
   --main-gray: #a1a5a7;
   --main-icon: #ffffff;
@@ -12,6 +13,7 @@
   --main-hover-button: #3547e9;
   /* --content-background: #dfdce3; */
   --sidebar-main-background: #4abdac;
+  --menu-graphic-background: #4abdac;
   --sidebar-hover-background: #29746b;
 
   --main-background: #f9f9f9;
