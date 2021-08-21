@@ -96,9 +96,11 @@ const Dashborad = () => {
   return (
     <Container>
       <ContentBody>
-        <ContentHeader title="Dashboard" />
-        <Content>
-          <ContentChartCard>
+        <div className="title-dashboard">
+          <ContentHeader title="Dashboard" />
+        </div>
+        <Content className="col-md-12 col-sm-12">
+          <ContentChartCard className="col-sm-12 d-flex flex-wrap">
             <CardGrafic
               number={20}
               id="tasks-started"
@@ -130,25 +132,27 @@ const Dashborad = () => {
               onClick={() => (setIsOpen(true), setFilter("Completed"))}
             />
           </ContentChartCard>
-          <ContentChart>
-            <ChartPizza
-              type="pie"
-              width={250}
-              id="chart-pizza"
-              className="chart-pizza"
-              series={graphicPizza.series}
-              options={graphicPizza.options}
-              // onClick={() => setIsOpen(!isOpen)}
-            />
-            <ChartDonut
-              width={250}
-              type="donut"
-              id="chart-donut"
-              className="chart-donut"
-              series={graphicDonut.series}
-              options={graphicDonut.options}
-              // onClick={() => setIsOpen(!isOpen)}
-            />
+          <ContentChart className="col-md-12 col-sm-12">
+            <div className="col-sm-12 col-md-12 d-flex flex-wrap chart-apex">
+              <ChartPizza
+                type="pie"
+                width={250}
+                id="chart-pizza"
+                className="chart-pizza"
+                series={graphicPizza.series}
+                options={graphicPizza.options}
+                // onClick={() => setIsOpen(!isOpen)}
+              />
+              <ChartDonut
+                width={250}
+                type="donut"
+                id="chart-donut"
+                className="chart-donut"
+                series={graphicDonut.series}
+                options={graphicDonut.options}
+                // onClick={() => setIsOpen(!isOpen)}
+              />
+            </div>
           </ContentChart>
         </Content>
       </ContentBody>

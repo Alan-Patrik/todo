@@ -29,7 +29,7 @@ export const Content = styled.div`
   }
 
   #animation:hover {
-    width: 17.375rem;
+    width: 302px;
     animation: animation 0.3s;
     animation-iteration-count: 1;
 
@@ -58,17 +58,6 @@ export const Content = styled.div`
     }
     0% {
       margin-left: 0;
-    }
-  }
-
-  @media (min-width: 250px) and (max-width: 600px) {
-    > li > h1 {
-      font-size: 17px;
-    }
-
-    #animation:hover {
-      animation: none;
-      width: auto;
     }
   }
 `;

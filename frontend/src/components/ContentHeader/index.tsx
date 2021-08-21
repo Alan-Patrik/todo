@@ -8,7 +8,7 @@ const ContentHeader = ({ title }: Props) => {
   return (
     <Container>
       <TitleContainer>
-        <h1>{title}</h1>
+        <h1 className="title-header">{title}</h1>
       </TitleContainer>
     </Container>
   );

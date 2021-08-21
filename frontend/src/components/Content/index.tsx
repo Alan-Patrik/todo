@@ -4,7 +4,9 @@ import { Container, ContentContainer } from "./styles";
 const Content: React.FC = ({ children }) => {
   return (
     <Container>
-      <ContentContainer>{children}</ContentContainer>
+      <ContentContainer className="col-md-12 col-sm-12">
+        {children}
+      </ContentContainer>
       <Footer />
     </Container>
   );

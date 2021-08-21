@@ -9,17 +9,21 @@ export const Container = styled.div`
 
 export const TitleContainer = styled.div`
   grid-area: TITLE;
-  > h1 {
+
+  > .title-header {
     color: var(--dark-gray);
     font-family: var(--heading-font);
     font-size: 1.5rem;
     margin: 1.5rem 0 1.5rem 0;
     right: 0;
+  }
 
-    @media (min-width: 250px) and (max-width: 600px) {
-      font-size: 16px;
-      margin: 1rem 0;
-      right: 0;
+  @media (min-width: 250px) and (max-width: 565px) {
+    > .title-header {
+      color: var(--dark-gray);
+      font-size: 1.125rem;
+      margin: 0.375rem;
+      text-align: center;
     }
   }
 `;

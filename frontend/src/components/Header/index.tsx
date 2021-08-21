@@ -1,6 +1,7 @@
 import { Container, Content, Image, Title } from "./styles";
 
 import IconTask from "../../assets/task.png";
+import ContentHeader from "../ContentHeader";
 
 const Header = () => {
   return (
@@ -8,6 +9,9 @@ const Header = () => {
       <Content id="content">
         <Image id="task-icon" src={IconTask} />
         <Title id="header-title">Tasks - Todo</Title>
+        <div className="title-header">
+          <ContentHeader title="Tasks - Dashboard" />
+        </div>
       </Content>
     </Container>
   );

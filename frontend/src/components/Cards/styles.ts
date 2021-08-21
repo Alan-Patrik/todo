@@ -18,12 +18,6 @@ export const Container = styled.button<ContainerProps>`
     ${(props) => props.backgroundColor2}
   );
   cursor: pointer;
-
-  @media (min-width: 250px) and (max-width: 600px) {
-    margin: 1rem;
-    width: 12.5rem;
-    height: 6.875rem;
-  }
 `;
 
 export const Content = styled.div`
@@ -53,8 +47,8 @@ export const Title = styled.h1`
 `;
 
 export const ResultNumber = styled.span`
-  font-size: 32px;
-  margin-top: 1.375rem;
+  font-size: 30px;
+  margin-top: 1.3rem;
   font-weight: bold;
   color: var(--main-black);
   font-family: var(--body-font);
