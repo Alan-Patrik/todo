@@ -18,21 +18,19 @@ export const ContentBody = styled.div`
     > .title-dashboard {
       padding: 1.875rem 0 0 2rem;
       left: 4.375rem;
-      position: absolute;
     }
   }
 
   @media (min-width: 640px) {
     > .title-dashboard {
-      padding: 1.875rem 0 0 90px;
+      padding: 1.563rem 0 0 5.625rem;
       left: 4.375rem;
-      position: absolute;
     }
   }
 `;
 
 export const Content = styled.div`
-  height: calc(100% - 4.875rem);
+  height: calc(100% - 6.75rem);
   display: flex;
   flex-direction: column;
   justify-content: center;

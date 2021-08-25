@@ -11,6 +11,11 @@ export const Content = styled.div`
   height: 4.375rem;
   align-items: center;
 
+  /* > .menu-hamburguer {
+    position: fixed;
+
+  } */
+
   @media (min-width: 250px) and (max-width: 565px) {
     > .title-header {
       display: block;

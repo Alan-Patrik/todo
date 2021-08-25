@@ -9,4 +9,12 @@ export const Grid = styled.div`
   grid-template-areas:
     "MENU HEADER"
     "MENU CONTENT";
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "HEADER"
+    "CONTENT CONTENT";
+  }
 `;
