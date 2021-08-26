@@ -11,18 +11,26 @@ export const Content = styled.div`
   height: 4.375rem;
   align-items: center;
 
-  /* > .menu-hamburguer {
-    position: fixed;
+  @media (max-width: 767px) {
+    display: flex;
+    height: 3.375rem;
+    align-items: center;
 
-  } */
+    > .menu-hamburguer {
+      left: 1.2rem;
+      position: fixed;
+    }
 
-  @media (min-width: 250px) and (max-width: 565px) {
     > .title-header {
       display: block;
     }
   }
 
-  @media (min-width: 565px) {
+  @media (min-width: 768px) {
+    > .menu-hamburguer {
+      display: none;
+    }
+
     > .title-header {
       display: none;
     }
@@ -34,10 +42,12 @@ export const Image = styled.img`
   height: 1.75rem;
   margin-left: 5.625rem;
 
-  @media (max-width: 640px) {
+  @media (max-width: 639px) {
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 2rem;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -47,8 +57,9 @@ export const Title = styled.h4`
   margin: 0 0 0 0.625rem;
   font-family: var(--heading-font);
   padding: 0;
+  text-align: center;
 
-  @media (max-width: 565px) {
+  @media (max-width: 767px) {
     display: none;
   }
 `;

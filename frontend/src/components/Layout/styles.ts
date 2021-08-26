@@ -10,11 +10,12 @@ export const Grid = styled.div`
     "MENU HEADER"
     "MENU CONTENT";
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 3.375rem auto;
+    grid-template-rows: 3.375rem auto;
     grid-template-areas:
     "HEADER"
-    "CONTENT CONTENT";
+    "MENU CONTENT";
   }
 `;

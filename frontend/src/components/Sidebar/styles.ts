@@ -48,12 +48,11 @@ export const MenuContainer = styled.ul`
   a:active {
   }
 
-  @media (min-width: 400px) and (max-width: 540px) {
-    > li > a > div {
-      svg {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
   }
 `;
