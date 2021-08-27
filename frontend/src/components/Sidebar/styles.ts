@@ -19,8 +19,8 @@ export const MenuContainer = styled.ul`
 
   > li > a > div {
     svg {
-      width: 1.875rem;
-      height: 1.875rem;
+      width: 2.25rem;
+      height: 2.25rem;
     }
   }
 
@@ -46,5 +46,13 @@ export const MenuContainer = styled.ul`
 
   > li:active,
   a:active {
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
   }
 `;
