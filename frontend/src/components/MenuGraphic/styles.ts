@@ -20,6 +20,7 @@ export const Container = styled.div<ContainerProps>`
   > svg {
     height: 1.6em;
     width: 1.6em;
+    margin: 1rem 1rem;
   }
 
   ::-webkit-scrollbar-track {
@@ -35,12 +36,26 @@ export const Container = styled.div<ContainerProps>`
     border-radius: 10px;
   }
 
-  @media (min-width: 250px) and (max-width: 400px) {
+  @media (max-width: 400px) {
     width: calc(100% - 8rem);
+
+    > svg {
+      height: 1.4em;
+      width: 1.4em;
+    }
   }
 
   @media (min-width: 400px) and (max-width: 540px) {
     width: calc(100% - 12rem);
+
+    > svg {
+      height: 1.4em;
+      width: 1.4em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    top: 3.375rem;
   }
 `;
 

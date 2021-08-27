@@ -1,4 +1,4 @@
-import Data from "../Data";
+import Data from "./Data";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { Container, ContentMenu } from "./styles";
@@ -10,7 +10,12 @@ interface Props {
   onClick?(): void;
 }
 
-const Menu: React.FC<Props> = ({ transition, value, filter, onClick }) => {
+const MenuGraphic: React.FC<Props> = ({
+  transition,
+  value,
+  filter,
+  onClick,
+}) => {
   return (
     <Container transition={transition}>
       <AiOutlineClose onClick={onClick} />
@@ -19,4 +24,4 @@ const Menu: React.FC<Props> = ({ transition, value, filter, onClick }) => {
   );
 };
 
-export default Menu;
+export default MenuGraphic;

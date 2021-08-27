@@ -8,13 +8,13 @@ export const Container = styled.div`
 export const ContentBody = styled.div`
   height: 100%;
 
-  @media (min-width: 250px) and (max-width: 586px) {
+  @media (max-width: 587px) {
     > .title-dashboard {
       display: none;
     }
   }
 
-  @media (min-width: 586px) and (max-width: 640px) {
+  @media (min-width: 586px) and (max-width: 639px) {
     > .title-dashboard {
       padding: 1.875rem 0 0 2rem;
       left: 4.375rem;
@@ -35,7 +35,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (max-width: 586px) {
+  @media (max-width: 587px) {
     padding-top: 4rem;
     display: block;
   }
@@ -58,6 +58,7 @@ export const ContentChart = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    z-index: -10;
   }
 
   .chart-pizza {

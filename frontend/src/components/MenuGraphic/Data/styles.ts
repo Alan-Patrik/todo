@@ -29,7 +29,7 @@ export const Content = styled.div`
   }
 
   #animation:hover {
-    width: 302px;
+    width: 305px;
     animation: animation 0.3s;
     animation-iteration-count: 1;
 
@@ -58,6 +58,17 @@ export const Content = styled.div`
     }
     0% {
       margin-left: 0;
+    }
+  }
+
+  @media (max-width: 587px) {
+    > #animation:hover {
+      width: auto;
+      animation: none;
+
+      p, h1 {
+      color: var(--dark-gray);
+    }
     }
   }
 `;

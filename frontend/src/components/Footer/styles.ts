@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   height: 4.375rem;
-
-  @media (min-width: 250px) and (max-width: 960px) {
-    height: 3.375rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const FooterContent = styled.footer`
+export const FooterContent = styled.div`
   font-size: 1rem;
   font-weight: bold;
   text-align: center;

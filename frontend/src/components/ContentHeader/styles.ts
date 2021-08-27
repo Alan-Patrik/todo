@@ -18,12 +18,10 @@ export const TitleContainer = styled.div`
     right: 0;
   }
 
-  @media (min-width: 250px) and (max-width: 565px) {
+  @media (max-width: 767px) {
     > .title-header {
       color: var(--dark-gray);
       font-size: 1.125rem;
-      margin: 0.375rem;
-      text-align: center;
     }
   }
 `;

@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const ContentContainer = styled.div`
   height: calc(100vh - 8.75rem);
 
-  @media (min-width: 250px) and (max-width: 960px) {
-    height: calc(100vh - 7.5rem);
+  @media (max-width: 960px) {
+    height: calc(100vh - 9.5rem);
   }
 `;

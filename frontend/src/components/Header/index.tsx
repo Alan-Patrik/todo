@@ -14,12 +14,7 @@ const Header = () => {
     <Container id="container">
       <Content id="content">
         <div className="menu-hamburguer">
-          <AiOutlineMenu
-            onClick={() => {
-              setIsOpen(!isOpen);
-              console.log("mudou!");
-            }}
-          />
+          <AiOutlineMenu onClick={() => setIsOpen(!isOpen)} />
           {isOpen ? <MenuHamburguer /> : null}
         </div>
         <Image id="task-icon" src={IconTask} />

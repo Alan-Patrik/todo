@@ -1,16 +1,22 @@
+import Footer from "../Footer";
 import { HamburguerData } from "./HamburguerData";
-import { Container, Content } from "./styles";
+import { Container, ContentContainer, Content, FooterMenu } from "./styles";
 
-const index = () => {
+const MenuHamburguer = () => {
   return (
     <Container>
-      <Content>
-        <ul>
+      <ContentContainer>
+        <Content>
           {HamburguerData.map((item, index) => {
             return <Item key={index} item={item} />;
           })}
-        </ul>
-      </Content>
+        </Content>
+        <FooterMenu>
+          <div className="footer-menu">
+            <Footer />
+          </div>
+        </FooterMenu>
+      </ContentContainer>
     </Container>
   );
 };
@@ -19,10 +25,13 @@ const Item = ({ item }: any) => {
   return (
     <li>
       <a href={item.path} id="link-a" className="link-a">
-        {item.title}
+        {/* <span id="icon-link" className="icon-link">
+          {item.icon}
+        </span> */}
+        <p className="name-link">{item.title}</p>
       </a>
     </li>
   );
 };
 
-export default index;
+export default MenuHamburguer;
