@@ -25,9 +25,6 @@ const Item = ({ item }: any) => {
   return (
     <li>
       <a href={item.path} id="link-a" className="link-a">
-        {/* <span id="icon-link" className="icon-link">
-          {item.icon}
-        </span> */}
         <p className="name-link">{item.title}</p>
       </a>
     </li>

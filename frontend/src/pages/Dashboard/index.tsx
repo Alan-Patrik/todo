@@ -1,4 +1,4 @@
-import CardGrafic from "../../components/Cards";
+import CardGrafic from "../../components/Cards/CardGraphic";
 import ContentHeader from "../../components/ContentHeader";
 
 import { AiOutlinePlayCircle } from "react-icons/ai";

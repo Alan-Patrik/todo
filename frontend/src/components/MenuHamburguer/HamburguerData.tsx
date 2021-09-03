@@ -1,24 +1,18 @@
-import { FcHome, FcInspection, FcCalendar, FcSettings } from "react-icons/fc";
-
 export const HamburguerData = [
   {
     title: "Dashboard",
-    icon: <FcHome />,
     path: "/home",
   },
   {
     title: "Add Task",
-    icon: <FcInspection />,
-    path: "/addTask",
+    path: "/newtask",
   },
   {
-    title: "Calendar",
-    icon: <FcCalendar />,
-    path: "/calendar",
+    title: "Task",
+    path: "/tasks",
   },
   {
     title: "Settings",
-    icon: <FcSettings />,
     path: "/settings",
   },
 ];

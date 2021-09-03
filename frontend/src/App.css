@@ -1,8 +1,8 @@
 :root {
+  --main-white: #ffffff;
   --main-black: #000000;
   --main-red: #fc4a1a;
   --main-gray: #a1a5a7;
-  --main-icon: #ffffff;
   --dark-gray: #505558;
   --light-gray: #aeb2b4;
   --hover-icon: #042a2b;
@@ -10,12 +10,25 @@
   --main-header: #ececec;
   --main-button: #4f7cac;
   --medium-gray: #899398;
-  --main-hover-button: #3547e9;
-  /* --content-background: #dfdce3; */
   --sidebar-main-background: #4abdac;
   --menu-graphic-background: #4abdac;
   --sidebar-hover-background: #29746b;
 
+  /* --colors-cards */
+    --color-one: #dd5732;
+    --color-two: #a1a5a7;
+    --color-three: #099ba0;
+    --color-four: #f7b733;
+    --color-five: #b073d3;
+    --color-six: #37b7e9;
+    --color-seven: #4f7cac;
+    --color-eight: #d3c64f;
+  
+  /* --button-background */
+  --main-button: #4f7cac;
+  --main-hover-button: #3f78b4;
+
+  /* --main-background*/
   --main-background: #f9f9f9;
 
   /* Fonts */
@@ -31,5 +44,4 @@ body {
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
