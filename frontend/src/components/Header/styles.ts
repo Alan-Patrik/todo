@@ -4,28 +4,16 @@ export const Container = styled.div`
   grid-area: HEADER;
   background-color: var(--main-header);
   box-shadow: 0 0.188rem 0.375rem #00000026;
+
+  @media (max-width: 767px) {
+    background-color: var(--menu-graphic-background);
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   height: 4.375rem;
   align-items: center;
-
-  @media (max-width: 587px) {
-    display: flex;
-    height: 3.375rem;
-    align-items: center;
-
-    > .title-header {
-      display: block;
-    }
-  }
-
-  @media (min-width: 588px) {
-    > .title-header {
-      display: none;
-    }
-  }
 
   @media (max-width: 767px) {
     display: flex;
@@ -35,6 +23,10 @@ export const Content = styled.div`
     > .menu-hamburguer {
       left: 1.2rem;
       position: fixed;
+    }
+
+    > .title-header {
+      display: block;
     }
   }
 
@@ -57,7 +49,7 @@ export const Image = styled.img`
   @media (max-width: 639px) {
     width: 1.3rem;
     height: 1.3rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
   }
 
   @media (min-width: 640px) and (max-width: 767px) {
@@ -70,17 +62,12 @@ export const Image = styled.img`
 export const Title = styled.h4`
   color: #7a7a7a;
   font-size: 1.375rem;
-  margin: 0 0 0 0.625rem;
+  margin: 0;
   font-family: var(--heading-font);
   padding: 0;
   text-align: center;
 
-  @media (max-width: 587px) {
+  @media (max-width: 767px) {
     display: none;
-  }
-
-  @media (min-width: 588px) and (max-width: 768px) {
-    color: var(--dark-gray);
-    font-size: 1.125rem;
   }
 `;

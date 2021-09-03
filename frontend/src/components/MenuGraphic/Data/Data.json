@@ -3,96 +3,112 @@
     "name": "Fazer compra",
     "description": "comprar o que está faltando",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#dd5732"
   },
   {
     "name": "Comprar remédio",
     "description": "comprar dipirona",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#a1a5a7"
   },
   {
     "name": "Buscar Brendon",
     "description": "pegar filho na escola ás 13h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#099ba0"
   },
   {
     "name": "Futebol",
     "description": "assistir mengão as 21h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#f7b733"
   },
   {
     "name": "Comprar remédio",
     "description": "comprar dipirona",
     "startDate": "06/25/2021",
-    "status": "In progress"
+    "status": "In progress",
+    "color": "#b073d3"
   },
   {
     "name": "Buscar fiçlho",
     "description": "pegar Brendon na escola ás 13h",
     "startDate": "06/25/2021",
-    "status": "In progress"
+    "status": "In progress",
+    "color": "#37b7e9"
   },
   {
     "name": "Fazer compra",
     "description": "comprar o que está faltando",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Completed"
+    "status": "Completed",
+    "color": "#4f7cac"
   },
   {
     "name": "Futebol",
     "description": "assistir mengão as 21h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Completed"
+    "status": "Completed",
+    "color": "#d3c64f"
   },
   {
     "name": "Fazer compra",
     "description": "comprar o que está faltando",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#dd5732"
   },
   {
     "name": "Comprar remédio",
     "description": "comprar dipirona",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#a1a5a7"
   },
   {
     "name": "Buscar Brendon",
     "description": "pegar filho na escola ás 13h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#099ba0"
   },
   {
     "name": "Futebol",
     "description": "assistir mengão as 21h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#f7b733"
   },
   {
     "name": "Futebol",
     "description": "assistir mengão as 21h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Completed"
+    "status": "Completed",
+    "color": "#b073d3"
   },
   {
     "name": "Fazer compra",
     "description": "comprar o que está faltando",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#37b7e9"
   },
   {
     "name": "Comprar remédio",
     "description": "comprar dipirona",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#4f7cac"
   },
   {
     "name": "Buscar Brendon",
     "description": "pegar filho na escola ás 13h",
     "startDate": "06/17/2021 at 09:00am",
-    "status": "Created"
+    "status": "Created",
+    "color": "#d3c64f"
   }
 ]

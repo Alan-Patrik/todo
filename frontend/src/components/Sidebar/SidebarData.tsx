@@ -7,11 +7,11 @@ export const SidebarData = [
   },
   {
     icon: <FcInspection />,
-    path: "/addtask",
+    path: "/newtask",
   },
   {
     icon: <FcCalendar />,
-    path: "/calendar",
+    path: "/tasks",
   },
   {
     icon: <FcSettings />,
