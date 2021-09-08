@@ -1,11 +1,16 @@
-import { FC, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import useCalendar, { Column } from "../Calendar/UseCalendar";
 import { Container } from "./styles";
 
-const Calendar: FC = () => {
-  const [selectedDay, setSelectedDay] = useState<string>();
+interface Props {
+  value?: string | undefined;
+  onChange?(event: ChangeEvent<HTMLInputElement>): void | undefined;
+}
+
+const Calendar: React.FC<Props> = ({ value, onChange }) => {
+  const [selectedDay, setSelectedDay] = useState(value);
 
   const {
     calendarRows,
@@ -21,8 +26,10 @@ const Calendar: FC = () => {
     return date;
   };
 
+  localStorage.setItem("@tasksDay", JSON.stringify(selectedDay));
+
   return (
-    <Container>
+    <Container onChange={onChange}>
       <div className="div-title">
         <p className="selected-month">
           {`${
@@ -55,7 +62,10 @@ const Calendar: FC = () => {
                     <td
                       key={col.date}
                       className={`today ${col.classes}`}
-                      onClick={() => dateClickHandler(col.date)}
+                      onClick={() => {
+                        setSelectedDay(col.date);
+                        dateClickHandler(col.date);
+                      }}
                     >
                       {col.value}
                     </td>
