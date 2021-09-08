@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface Props {
+  background?: string | undefined;
+}
+
+export const Container = styled.div<Props>`
   height: 100%;
   overflow-y: auto;
 
@@ -16,6 +20,10 @@ export const Container = styled.div`
     background: #00000050;
     border-radius: 10px;
   }
+
+  @media (max-width: 767px) {
+    display: ${(props) => props.background};
+  }
 `;
 
 export const ContentBody = styled.div`
@@ -30,12 +38,11 @@ export const ContentBody = styled.div`
 
 export const Content = styled.div`
   align-items: center;
-  gap: 100px;
+  gap: 6.25rem;
 
   @media (max-width: 939px) {
-    gap: 30px;
+    gap: 1.875rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
     align-items: center;
   }
 `;
@@ -47,13 +54,13 @@ export const ContainerCalendar = styled.div`
 `;
 
 export const ContentCard = styled.div`
-  gap: 30px;
-  width: 420px;
-  height: 280px;
+  gap: 1.875rem;
+  width: 25rem;
+  height: 17.5rem;
   display: flex;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   align-items: center;
   flex-direction: column;
 
@@ -73,7 +80,7 @@ export const ContentCard = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 816px) {
+  @media (max-width: 720px) {
     margin-top: 0;
   }
 `;

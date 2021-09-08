@@ -59,7 +59,7 @@ export const Container = styled.div`
     color: var(--light-gray);
   }
 
-  @media (max-width: 939px) {
+  @media (max-width: 768px) {
     .selected-month {
       font-size: 18px;
     }

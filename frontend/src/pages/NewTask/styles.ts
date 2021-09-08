@@ -3,6 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100%;
   overflow-y: auto;
+
+  ::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 0.375rem;
+    border-radius: 10px;
+    background: #c4c7c9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00000050;
+    border-radius: 10px;
+  }
 `;
 
 export const ContentBody = styled.div`
@@ -22,7 +36,6 @@ export const Content = styled.div`
   @media (max-width: 939px) {
     gap: 1.875rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
     align-items: center;
     flex-direction: column-reverse;
   }
@@ -31,6 +44,7 @@ export const Content = styled.div`
 export const ContainerButton = styled.div`
   width: 21.875rem;
   height: 2.5rem;
+  margin-top: 2rem;
 
   @media (max-width: 361px) {
     width: 19.375rem;
