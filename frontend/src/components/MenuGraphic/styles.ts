@@ -24,12 +24,13 @@ export const Container = styled.div<ContainerProps>`
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #44444411;
+    background-color: #d1d1d1;
     border-radius: 10px;
   }
   ::-webkit-scrollbar {
     width: 0.375rem;
-    background: var(--light-gray);
+    border-radius: 10px;
+    background: #c4c7c9;
   }
   ::-webkit-scrollbar-thumb {
     background: #00000050;

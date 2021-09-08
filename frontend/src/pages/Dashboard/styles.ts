@@ -3,6 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100%;
   overflow-y: auto;
+
+  ::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 0.375rem;
+    border-radius: 10px;
+    background: #c4c7c9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00000050;
+    border-radius: 10px;
+  }
 `;
 
 export const ContentBody = styled.div`
