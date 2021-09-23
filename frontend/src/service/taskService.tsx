@@ -1,23 +1,23 @@
 import http from "./http";
 
 const getTask = () => {
-  return http.get("/task");
+  return http.get("/tasks");
 };
 
 const getTaskId = (id: number) => {
-  return http.get(`/task/${id}`);
+  return http.get(`/tasks/${id}`);
 };
 
 const createTask = (data: any) => {
-  return http.post(`/task`, data);
+  return http.post(`/tasks`, data);
 };
 
 const updateTask = (id: number, data: string) => {
-  return http.put(`/task/${id}`, data);
+  return http.put(`/tasks/${id}`, data);
 };
 
 const deleteTask = (id: number) => {
-  return http.delete(`/task/${id}`);
+  return http.delete(`/tasks/${id}`);
 };
 
 export default {

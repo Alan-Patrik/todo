@@ -31,46 +31,37 @@ const NewTask = () => {
 
   const [state, setState] = useState({
     name: "",
-    descricao: "",
+    description: "",
     startDate: "",
-    endDate: "",
+    endDate: null,
     color: "",
   });
 
   const history = useHistory();
-
-  const options = [
-    { value: "Create", label: "Create" },
-    { value: "Inprogress", label: "Inprogress" },
-    { value: "Finished", label: "Finished" },
-  ];
+  let data = {};
 
   const handleCreateTask = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    let test1 = localStorage.getItem("@tasksDay");
-    let test2 = localStorage.getItem("@tasksColor");
+    let convertTest1 = JSON.parse(localStorage.getItem("@tasksDay")!);
+    let convertTest2 = JSON.parse(localStorage.getItem("@tasksColor")!);
 
-    let data = {
+    data = {
       name: state.name,
-      descricao: state.descricao,
-      startDate: test1,
+      description: state.description,
+      startDate: convertTest1,
       endDate: state.endDate,
-      status: selectStatus,
-      color: test2,
+      status: 0,
+      color: convertTest2,
     };
 
     service
       .createTask(data)
       .then((response) => {
-        if (response.status === 200) {
-          history.push("/tasks");
-        } else {
+        if (response.status === 201) {
           setAlert({
-            message:
-              "I'm sorry, an unexpected error occurred and the task could not be updated..\n" +
-              response.status,
-            variant: "danger",
+            message: "Your task has been successfully registered!\n",
+            variant: "success",
             show: true,
           });
           setTimeout(() => {
@@ -79,6 +70,7 @@ const NewTask = () => {
               variant: "",
               show: false,
             });
+            history.push("/tasks");
           }, 3000);
         }
       })
@@ -90,23 +82,30 @@ const NewTask = () => {
           variant: "danger",
           show: true,
         });
+        setTimeout(() => {
+          setAlert({
+            message: "",
+            variant: "",
+            show: false,
+          });
+        }, 3000);
       });
-    window.location.reload();
   };
 
   return (
     <Container>
       <ContentBody>
+        <Alert show={show} variant={variant}>
+          {message}
+        </Alert>
         <Content className="col-md-12 col-sm-12 d-flex flex-wrap justify-content-center align-items-center">
-          <Alert show={show} variant={variant}>
-            {message}
-          </Alert>
           <ContainerInputs>
             <div className="title-newtask">
               <ContentHeader title="Add New Task" />
             </div>
             <Form onSubmit={handleCreateTask}>
               <Input
+                required
                 type="text"
                 id="input-text"
                 value={state.name}
@@ -117,23 +116,15 @@ const NewTask = () => {
                 }
               />
               <Input
+                required
                 type="textarea"
                 id="input-text-area"
-                value={state.descricao}
+                value={state.description}
                 className="input-textarea"
                 placeholder="Go to the market to shop"
                 onChange={(event) =>
-                  setState({ ...state, descricao: event.target.value })
+                  setState({ ...state, description: event.target.value })
                 }
-              />
-              <SelectInput
-                placeholder="Select"
-                key="select"
-                value={isDown}
-                options={options}
-                className="option-select"
-                onClick={() => setIsDown(!isDown)}
-                onChange={(event) => setSelectStatus(event.target.value)}
               />
               <InputColor
                 value={state.color}
@@ -149,6 +140,9 @@ const NewTask = () => {
             </Form>
           </ContainerInputs>
           <ContainerCalendar>
+            <div className="title-newtask">
+              <ContentHeader title="Add New Task" />
+            </div>
             <Calendar
               value={state.startDate}
               onChange={(event) =>

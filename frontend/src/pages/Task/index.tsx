@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Calendar from "../../components/Calendar";
 import CardTask from "../../components/Cards/CardTask";
 import ContentHeader from "../../components/ContentHeader";
-import DataJson from "../../components/MenuGraphic/Data/Data.json";
 import EditTask from "../EditTask";
+import service from "../../service/taskService";
 
 import {
   Container,
@@ -11,6 +11,8 @@ import {
   Content,
   ContainerCalendar,
   ContentCard,
+  TestContainer,
+  TestComponent,
 } from "./styles";
 
 interface Props {
@@ -19,7 +21,18 @@ interface Props {
 
 const Tasks: React.FC<Props> = () => {
   const [isSelected, setIsSelected] = useState(false);
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    const getAllTasks = async () => {
+      let aux: any;
+      aux = await service.getTask().then((response) => response.data);
+      setData(aux.data);
+    };
+
+    getAllTasks();
+  }, []);
+  console.log(data);
   return (
     <>
       <Container background={!isSelected === true ? "block" : "none"}>
@@ -31,19 +44,29 @@ const Tasks: React.FC<Props> = () => {
               </div>
               <Calendar />
             </ContainerCalendar>
-            <ContentCard>
-              {DataJson.map((test, index) =>
-                test.status !== "Completed" ? (
-                  <CardTask
-                    key={index}
-                    className="card-task"
-                    id="card-task"
-                    content={test}
-                    onEdit={() => setIsSelected(true)}
-                  />
-                ) : null
-              )}
-            </ContentCard>
+            {data.length === 0 ? (
+              <TestContainer>
+                <TestComponent>
+                  <p className="text-information-task">
+                    To view your tasks here,<br></br>you need to create them!
+                  </p>
+                </TestComponent>
+              </TestContainer>
+            ) : (
+              <ContentCard>
+                {data?.map((test: any, index: number) =>
+                  test.status !== "Completed" ? (
+                    <CardTask
+                      key={index}
+                      className="card-task"
+                      id="card-task"
+                      content={test}
+                      onEdit={() => setIsSelected(true)}
+                    />
+                  ) : null
+                )}
+              </ContentCard>
+            )}
           </Content>
         </ContentBody>
       </Container>

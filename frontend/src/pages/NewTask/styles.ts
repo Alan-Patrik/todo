@@ -80,9 +80,21 @@ export const ContainerInputs = styled.div`
 
   @media (max-width: 939px) {
     > .title-newtask {
-      padding-left: 1.25rem;
+      display: none;
     }
   }
 `;
 
-export const ContainerCalendar = styled.div``;
+export const ContainerCalendar = styled.div`
+  @media (max-width: 939px) {
+    > .title-newtask {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 940px) {
+    > .title-newtask {
+      display: none;
+    }
+  }
+`;

@@ -64,8 +64,6 @@ export const ContentCard = styled.div`
   align-items: center;
   flex-direction: column;
 
-  overflow-y: auto;
-
   ::-webkit-scrollbar-track {
     background-color: #d1d1d1;
     border-radius: 10px;
@@ -80,7 +78,41 @@ export const ContentCard = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 720px) {
+  @media screen and (max-width: 720px) {
     margin-top: 0;
+  }
+`;
+
+export const TestContainer = styled.div`
+  display: flex;
+  gap: 1.875rem;
+  width: 18.75rem;
+  height: 12.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 9.375rem;
+  justify-content: center;
+  border: 3px dashed #29746b;
+
+  @media screen and (max-width: 626px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 769px) {
+    margin-top: 8.375rem;
+  }
+`;
+
+export const TestComponent = styled.div`
+  .text-information-task {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 18px;
+    font-family: var(--body-font);
+    font-weight: bold;
   }
 `;
