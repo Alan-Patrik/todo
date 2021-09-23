@@ -61,7 +61,7 @@ public class TaskController {
 		TaskDTO task = service.createTask(data);
 		
 		return ResponseEntity
-				.ok()
+				.status(HttpStatus.CREATED)
 				.header("status-code", String.valueOf(HttpStatus.CREATED))
 				.contentType(MediaType.APPLICATION_JSON)
 				.body(new HttpResponseDTO<>(task, HttpStatus.CREATED));

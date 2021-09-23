@@ -1,4 +1,4 @@
-import Data from "./Data";
+import Data from "../../Data";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { Container, ContentMenu } from "./styles";

@@ -57,11 +57,12 @@ public class TaskService implements ITaskService {
 
 		task.setName(data.getName());
 		task.setDescription(data.getDescription());
-		task.setStartDate(new Date());
-		task.setEndDate(new Date());
+		task.setStartDate(data.getStartDate());
+		task.setEndDate(null);
 		task.setCreatedAt(Instant.now());
 		task.setLastActivity(Instant.now());
 		task.setStatus(data.getStatus());
+		task.setColor(data.getColor());
 
 		Task savedTask = repository.save(task);
 
@@ -79,6 +80,7 @@ public class TaskService implements ITaskService {
 		data.setCreatedAt(data.getCreatedAt());
 		data.setLastActivity(Instant.now());
 		data.setStatus(taskDTO.getStatus());
+		data.setColor(taskDTO.getColor());
 		
 		Task task = mapper.toModel(taskDTO);
 		

@@ -24,4 +24,5 @@ public class TaskDTO implements Serializable {
 	private Instant createdAt;
 	private Instant lastActivity;
 	private TaskEnums status;
+	private String color;
 }

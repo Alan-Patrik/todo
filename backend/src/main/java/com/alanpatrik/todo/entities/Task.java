@@ -40,11 +40,11 @@ public class Task {
 	private String description;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "America/Sao_Paulo")
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss", timezone = "America/Sao_Paulo")
 	private Date startDate;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "America/Sao_Paulo")
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss", timezone = "America/Sao_Paulo")
 	private Date endDate;
 	
 	@CreatedDate
@@ -55,5 +55,8 @@ public class Task {
 	
 	@Column(nullable = false)
 	private TaskEnums status;
+
+	@Column(nullable = false)
+	private String color;
 
 }
