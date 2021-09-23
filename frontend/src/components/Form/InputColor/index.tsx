@@ -4,12 +4,13 @@ import { Container, Content, ContainerColor } from "./styles";
 
 interface Props {
   onClick?(): void;
-  value?: string | undefined;
+  value?: string | undefined | null;
   onChange?(event: ChangeEvent<HTMLInputElement>): void | undefined;
 }
 
 const InputColor: React.FC<Props> = ({ onClick, value, onChange }) => {
   const [selectedColor, setSelectedColor] = useState(value);
+  const [color, setColor] = useState();
 
   localStorage.setItem("@tasksColor", JSON.stringify(selectedColor));
 
@@ -19,72 +20,72 @@ const InputColor: React.FC<Props> = ({ onClick, value, onChange }) => {
         <p className="p-color">Choose a color below for the card</p>
         <ContainerColor onClick={onClick} onChange={onChange}>
           <span
-            onClick={() => setSelectedColor("color-one")}
+            onClick={() => setSelectedColor("#dd5732")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-one"
+              selectedColor === "" || selectedColor === "#dd5732"
                 ? "color-one"
                 : "color-one-secondary"
             }`}
             id="span-color color-one"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-two")}
+            onClick={() => setSelectedColor("#a1a5a7")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-two"
+              selectedColor === "" || selectedColor === "#a1a5a7"
                 ? "color-two"
                 : "color-two-secondary"
             }`}
             id="span-color color-two"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-three")}
+            onClick={() => setSelectedColor("#099ba0")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-three"
+              selectedColor === "" || selectedColor === "#099ba0"
                 ? "color-three"
                 : "color-three-secondary"
             }`}
             id="span-color color-three"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-four")}
+            onClick={() => setSelectedColor("#f7b733")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-four"
+              selectedColor === "" || selectedColor === "#f7b733"
                 ? "color-four"
                 : "color-four-secondary"
             }`}
             id="span-color color-four"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-five")}
+            onClick={() => setSelectedColor("#b073d3")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-five"
+              selectedColor === "" || selectedColor === "#b073d3"
                 ? "color-five"
                 : "color-five-secondary"
             }`}
             id="span-color color-five"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-six")}
+            onClick={() => setSelectedColor("#37b7e9")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-six"
+              selectedColor === "" || selectedColor === "#37b7e9"
                 ? "color-six"
                 : "color-six-secondary"
             }`}
             id="span-color color-six"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-seven")}
+            onClick={() => setSelectedColor("#4f7cac")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-seven"
+              selectedColor === "" || selectedColor === "#4f7cac"
                 ? "color-seven"
                 : "color-seven-secondary"
             }`}
             id="span-color color-seven"
           ></span>
           <span
-            onClick={() => setSelectedColor("color-eight")}
+            onClick={() => setSelectedColor("#d3c64f")}
             className={`span-color ${
-              selectedColor === "" || selectedColor === "color-eight"
+              selectedColor === "" || selectedColor === "#d3c64f"
                 ? "color-eight"
                 : "color-eight-secondary"
             }`}

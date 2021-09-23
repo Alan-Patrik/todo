@@ -24,4 +24,10 @@ export const TitleContainer = styled.div`
       font-size: 1.125rem;
     }
   }
+
+  @media screen and (min-width: 940px) {
+    > .title-header {
+      margin-top: 0;
+    }
+  }
 `;

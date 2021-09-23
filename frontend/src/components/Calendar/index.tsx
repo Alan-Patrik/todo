@@ -5,7 +5,7 @@ import useCalendar, { Column } from "../Calendar/UseCalendar";
 import { Container } from "./styles";
 
 interface Props {
-  value?: string | undefined;
+  value?: string | undefined | null;
   onChange?(event: ChangeEvent<HTMLInputElement>): void | undefined;
 }
 

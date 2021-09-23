@@ -26,7 +26,6 @@ const EditTask: React.FC<Props> = ({ onClick }) => {
   const [isDown, setIsDown] = useState(false);
 
   const options = [
-    { value: "Create", label: "Create" },
     { value: "Inprogress", label: "Inprogress" },
     { value: "Finished", label: "Finished" },
   ];
